@@ -13,7 +13,13 @@
 	<hr />
 {% endif %}
 
-<ol>
+<section class="current_clip">
+	<p>Current clip question</p>
+	<p><input class="answer" type="text" placeholder="Answer" /></p>
+</section>
+
+<h3>Clips</h3>
+<ol class="positions">
 {% for quizclip in quiz.quizclip_set.all %}
 	<li value="{{ quizclip.position }}"><a href="{% url 'clip' quizclip.clip.id %}">{{ quizclip.clip.name }}</a></li>
 {% endfor %}

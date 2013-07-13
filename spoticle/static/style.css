@@ -24,7 +24,7 @@ input, select, textarea, button {
 
 
 header {
-  line-height: 120px;
+  line-height: 80px;
   padding-bottom: 25px;
   border-bottom: 1px solid #ccc;
 }
@@ -69,4 +69,33 @@ header ul li a:hover, header ul li.current a:hover {
 }
 header ul li.current a {
   border-bottom: 3px solid #d48e83;
+}
+
+.positions {
+  list-style: none;
+}
+.positions li:before {
+  content: attr(value);
+
+  font-family: Copse;
+
+  background: #a43;
+  color: white;
+  border-radius: 100px;
+  margin-right: 0.3em;
+
+  display: inline-block;
+  width: 1.3em;
+  line-height: 1.3em;
+  text-align: center;
+}
+
+input.answer {
+  font-size: 2em;
+  text-align: center;
+}
+.current_clip {
+  padding: 0.5em 0;
+  text-align: center;
+  background: #eee;
 }
