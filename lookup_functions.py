@@ -1,5 +1,5 @@
-from spoticle.models import Quiz,QuizClip
-settings.configure()
+from spoticle.models import Quiz, QuizClip
+#settings.configure()
 # finds edit distance between two strings
 def levenshtein(s1, s2):
     if len(s1) < len(s2):

@@ -1,4 +1,7 @@
-{% load staticfiles %}<!DOCTYPE html>
+{% load staticfiles %}
+{% load dajaxice_templatetags %}
+
+<!DOCTYPE html>
 <head>
   <meta charset="utf-8">
   <title>{% block title %}spoticle{% endblock title %}</title>
@@ -6,6 +9,8 @@
   <link rel="shortcut icon" type="image/x-icon" href="{% static "favicon.ico" %}">
 
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+  {% dajaxice_js_import %}
 </head>
 <body>
   <header>

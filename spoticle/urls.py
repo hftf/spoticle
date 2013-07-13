@@ -4,6 +4,10 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 admin.autodiscover()
 
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from dajaxice.core import dajaxice_autodiscover, dajaxice_config
+dajaxice_autodiscover()
+
 from spoticle import views
 
 urlpatterns = patterns('',
@@ -23,9 +27,12 @@ urlpatterns = patterns('',
     url(r'^accounts/login/$', 'django.contrib.auth.views.login', { 'template_name': 'login.html', 'extra_context': { 'next': '/' }}, name='login'),
     url(r'^accounts/logout/$', 'django.contrib.auth.views.logout', { 'next_page': '/' }, name='logout'),
 
+    url(dajaxice_config.dajaxice_url, include('dajaxice.urls')),
+
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 )
+urlpatterns += staticfiles_urlpatterns()
