@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2><strong>{{ quiz.name }}</strong></h2>
+<h2>{{ quiz.name }}</h2>
 <p><cite>By <strong>{{ quiz.created_by.username }}</strong></cite></p>
 <p>{{ quiz.description }}</p>
 
-<section class="current_clip">
+<section class="current-clip">
 	<p>
+		<span class="position">4</span>
 	{% if quiz.question %}
 		{{ quiz.question }}
 	{% else %}
@@ -14,10 +15,10 @@
 	{% endif %}
 	</p>
 	<p><input class="answer" type="text" placeholder="Answer" /></p>
-	<p class="sound_bar">
+	<p class="sound-bar">
 		<audio controls height="100" width="100">
-		  <source src="{{quiz.path}}" type="audio/mpeg">
-		  <embed height="50" width="100" src="{{quiz.path}}">
+			<source src="{{ quiz.path }}" type="audio/mpeg" />
+			<embed height="50" width="100" src="{{ quiz.path }}" />
 		</audio>
 	</p>
 </section>
@@ -25,7 +26,28 @@
 <h3>Clips</h3>
 <ol class="positions">
 {% for quizclip in quiz.quizclip_set.all %}
-	<li value="{{ quizclip.position }}"><a href="{% url 'clip' quizclip.clip.id %}">{{ quizclip.clip.name }}</a></li>
+	<li value="{{ quizclip.position }}">
+		<a href="{% url 'clip' quizclip.clip.id %}">{{ quizclip.question }}</a>
+		{{ quizclip.duration }}
+		<span class="client-answer">
+			My answer
+			{% if quizclip.correct == True %}
+				<span class="icon-check-sign"></span>
+			{% elif quizclip.correct == False %}
+				<span class="icon-remove-sign"></span>
+			{% elif quizclip.correct == None %}
+				<span class="icon-circle-blank"></span>
+			{% endif %}
+		</span>
+	</li>
 {% endfor %}
+	<li value="6">
+		<a>Another clip</a>
+		<span class="client-answer">My answer <span class="icon-check-sign"></span></span>
+	</li>
+	<li value="42">
+		<a>Another clip</a>
+		<span class="client-answer">My answer <span class="icon-remove-sign"></span></span>
+	</li>
 </ol>
 {% endblock content %}

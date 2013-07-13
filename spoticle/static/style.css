@@ -15,7 +15,7 @@ header nav a {
   color: inherit;
 }
 h1, h2, h3, h4 {
-  font-weight: normal;
+  /*font-weight: normal;*/
 }
 input, select, textarea, button {
   font-family: inherit;
@@ -93,8 +93,12 @@ header ul li.current a {
 
 .positions {
   list-style: none;
+  padding-left: 0;
 }
-.positions li:before {
+.positions li {
+  margin-bottom: 0.5em;
+}
+.positions li:before, .position {
   content: attr(value);
 
   font-family: Copse;
@@ -105,22 +109,22 @@ header ul li.current a {
   margin-right: 0.3em;
 
   display: inline-block;
-  width: 1.3em;
-  line-height: 1.3em;
+  width: 1.4em;
+  line-height: 1.4em;
   text-align: center;
 }
+.positions .client-answer { float: right; }
+.icon-check-sign { color: #5b5; }
+.icon-remove-sign { color: #e33; }
+.icon-circle-blank { color: #bbb; }
 
 input.answer {
   font-size: 1.5em;
   text-align: center;
 }
-.current_clip {
+.current-clip {
   padding: 0.5em 0;
   text-align: center;
   background: #eee;
   margin-bottom: 1.0em;
-}
-
-.sound_bar {
-  text-align: center;
 }
