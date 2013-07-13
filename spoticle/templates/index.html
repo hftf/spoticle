@@ -5,7 +5,7 @@
 {% if quizzes %}
 	<ul>
 	{% for quiz in quizzes %}
-		<li><a href="{% url 'quiz' quiz.id %}">{{ quiz.name }}</a></li>
+		<li><a href="{% url 'quiz' quiz.id %}">{{ quiz.name }}</a> by {{ quiz.created_by.username }}</li>
 	{% endfor %}
 	</ul>
 {% else %}
