@@ -1,0 +1,10 @@
+<h1>List of quizzes</h1>
+{% if quizzes %}
+	<ul>
+	{% for quiz in quizzes %}
+		<li><a href="/quiz/{{ quiz.id }}/">{{ quiz.name }}</a></li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p>There are no quizzes :(</p>
+{% endif %}
