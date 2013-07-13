@@ -24,7 +24,7 @@ class DetailView(generic.DetailView):
 
 class UpdateView(generic.edit.UpdateView):
 	model = Quiz
-	template_name = 'quiz.html'
+	template_name = 'compose.html'
 
 def quiz(request, quiz_id):
 	quiz = get_object_or_404(Quiz, pk=quiz_id)
