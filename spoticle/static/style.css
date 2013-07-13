@@ -15,7 +15,7 @@ header nav a {
   color: inherit;
 }
 h1, h2, h3, h4 {
-  font-weight: normal;
+  /*font-weight: normal;*/
 }
 input, select, textarea, button {
   font-family: inherit;
@@ -93,6 +93,7 @@ header ul li.current a {
 
 .positions {
   list-style: none;
+  padding-left: 0;
 }
 .positions li {
   margin-bottom: 0.5em;
