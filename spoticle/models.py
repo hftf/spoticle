@@ -8,6 +8,9 @@ class Quiz(models.Model):
 	def __unicode__(self):
 		return self.name
 
+	class Meta:
+		verbose_name_plural = "Quizzes"
+
 class Clip(models.Model):
 	youtube_url = models.CharField(max_length=200)
 	start_seconds = models.IntegerField(default=0)
