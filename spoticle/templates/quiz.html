@@ -16,6 +16,13 @@
 	<p><input class="answer" type="text" placeholder="Answer" /></p>
 </section>
 
+<section class="sound_bar">
+	<audio controls height="100" width="100">
+	  <source src="{{quiz.path}}" type="audio/mpeg">
+	  <embed height="50" width="100" src="{{quiz.path}}">
+	</audio>
+</section>
+
 <h3>Clips</h3>
 <ol class="positions">
 {% for quizclip in quiz.quizclip_set.all %}
