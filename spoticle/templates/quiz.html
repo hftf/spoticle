@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Quiz: <strong>{{ quiz.name }}</strong></h2>
+<ol>
+{% for quizclip in quiz.ordered_quizclips %}
+	<li value="{{ quizclip.position }}"><a href="{% url 'clip' quizclip.clip.id %}">{{ quizclip.clip.name }}</a></li>
+{% endfor %}
+</ol>
+{% endblock content %}

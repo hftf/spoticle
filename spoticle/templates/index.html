@@ -1,4 +1,7 @@
-<h1>List of quizzes</h1>
+{% extends "base.html" %}
+
+{% block content %}
+<h2>List of quizzes</h2>
 {% if quizzes %}
 	<ul>
 	{% for quiz in quizzes %}
@@ -8,3 +11,4 @@
 {% else %}
 	<p>There are no quizzes :(</p>
 {% endif %}
+{% endblock content %}

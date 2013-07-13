@@ -11,7 +11,11 @@ urlpatterns = patterns('',
     # url(r'^$', 'spoticle.views.home', name='home'),
     # url(r'^spoticle/', include('spoticle.foo.urls')),
     url(r'^$', views.index, name='index'),
+    url(r'^play/$', views.index, name='play'),
+    url(r'^compose/$', views.index, name='compose'),
+    url(r'^about/$', views.index, name='about'),
     url(r'^quiz/(?P<quiz_id>\d+)/$', views.quiz, name='quiz'),
+    url(r'^clip/(?P<clip_id>\d+)/$', views.clip, name='clip'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
