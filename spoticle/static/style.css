@@ -111,11 +111,16 @@ header ul li.current a {
 }
 
 input.answer {
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: center;
 }
 .current_clip {
   padding: 0.5em 0;
   text-align: center;
   background: #eee;
+  margin-bottom: 1.0em;
+}
+
+.sound_bar {
+  text-align: center;
 }
