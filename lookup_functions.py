@@ -1,3 +1,5 @@
+from spoticle.models import Quiz,QuizClip
+settings.configure()
 # finds edit distance between two strings
 def levenshtein(s1, s2):
     if len(s1) < len(s2):
@@ -20,9 +22,12 @@ def levenshtein(s1, s2):
     return previous_row[-1]
 
 
-def load_answers():
-    answers = #query database for answers for this quiz id, ordered by position
-    return [answer.split(',') for answer in answers]
+def load_answers(quiz_id):
+    overall_question = Quiz.objects.get(pk=quiz_id)
+    if overall_question[0].question:
+	return overall_question[0].answers.split(',')
+    quiz_clips = QuizClip.objects.get(quiz=quiz_id)
+    return [answer.split(',') for quiz_clip.answer in quiz_clips]
 
 #returns true if answer is one word and answer appears in user provided answer
 def check_name(user_input,answer):
@@ -37,8 +42,10 @@ def check_name(user_input,answer):
 # takes in answers array, user submitted answer, corresponding question number, and boolean to determine if all answers should be checked
 # returns positions of questions that were correctly answered
 def lookup(answers,submission,qnum,check_all):
+    if not submission:
+	return []
     if not check_all:
-        for answer in answer[qnum]
+        for answer in answer[qnum]:
             if levenshtein(submission,answer) < 3 or check_name(submission,answer):
                 return [qnum]
         return []
