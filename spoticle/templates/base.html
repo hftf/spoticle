@@ -3,14 +3,16 @@
   <meta charset="utf-8">
   <title>{% block title %}spoticle{% endblock title %}</title>
   <link rel="stylesheet" href="{% static "style.css" %}">
+
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
   <header>
     <h1><a href="{% url 'index' %}">spoticle</a></h1>
     <ul>
-      <li><a class="play"    href="{% url 'play'    %}">play</a></li>
-      <li><a class="compose" href="{% url 'compose' %}">compose</a></li>
-      <li><a class="about"   href="{% url 'about'   %}">about</a></li>
+      <li><a class="play"    href="{% url 'play'    %}"><span class="icon-play-sign"   ></span> play</a></li>
+      <li><a class="compose" href="{% url 'compose' %}"><span class="icon-edit-sign"   ></span> compose</a></li>
+      <li><a class="random"  href="{% url 'random'  %}"><span class="icon-warning-sign"></span> random</a></li>
     </ul>
     <br style="clear: left;" />
   </header>

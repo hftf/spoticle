@@ -13,7 +13,7 @@ urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
     url(r'^play/$', views.index, name='play'),
     url(r'^compose/$', views.index, name='compose'),
-    url(r'^about/$', views.index, name='about'),
+    url(r'^random/$', views.index, name='random'),
     url(r'^quiz/(?P<quiz_id>\d+)/$', views.quiz, name='quiz'),
     url(r'^clip/(?P<clip_id>\d+)/$', views.clip, name='clip'),
 

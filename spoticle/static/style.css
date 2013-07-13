@@ -52,12 +52,17 @@ header ul {
   margin: 0;
   padding: 0 0 0 50px;
   list-style: none;
+  text-transform: uppercase;
 }
 header ul li {
-  font-size: 27px;
+  font-size: 26px;
   
   float: left;
   margin: 0 25px 0 0;
+}
+header ul li a span {
+  padding-right: 0.15em;
+  color: #a43;
 }
 header ul li a:hover, header ul li.current a:hover {
   border-bottom: 3px solid #a43;
