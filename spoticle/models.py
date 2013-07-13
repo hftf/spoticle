@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib import admin
+from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
 
 class Quiz(models.Model):
@@ -15,6 +16,7 @@ class Quiz(models.Model):
 
 	path = models.CharField(max_length=200)
 	pub_date = models.DateTimeField('date published') # or never
+	created_by = models.ForeignKey(User)
 
 	def __unicode__(self):
 		return "%s (%s)" % (self.name, self.id)
@@ -29,6 +31,7 @@ class Quiz(models.Model):
 
 	class Meta:
 		verbose_name_plural = "Quizzes"
+		ordering = ['-pub_date']
 
 class QuizAdmin(admin.ModelAdmin):
 	prepopulated_fields = { 'slug': ('name', ) }

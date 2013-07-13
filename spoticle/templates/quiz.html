@@ -2,7 +2,7 @@
 
 {% block content %}
 <h2><strong>{{ quiz.name }}</strong></h2>
-<p><cite>By <strong>user mcuser</strong></cite></p>
+<p><cite>By <strong>{{ quiz.created_by.username }}</strong></cite></p>
 <p>{{ quiz.description }}</p>
 <hr />
 
