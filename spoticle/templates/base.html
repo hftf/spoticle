@@ -8,13 +8,22 @@
 </head>
 <body>
   <header>
-    <h1><a href="{% url 'index' %}">spoticle</a></h1>
-    <ul>
-      <li><a class="play"    href="{% url 'play'    %}"><span class="icon-play-sign"   ></span> play</a></li>
-      <li><a class="compose" href="{% url 'compose' %}"><span class="icon-edit-sign"   ></span> compose</a></li>
-      <li><a class="random"  href="{% url 'random'  %}"><span class="icon-warning-sign"></span> random</a></li>
-    </ul>
-    <br style="clear: left;" />
+    <nav>
+      <h1><a href="{% url 'index' %}">spoticle</a></h1>
+      <ul>
+        <li><a class="play"    href="{% url 'play'    %}"><span class="icon-play-sign"   ></span> play</a></li>
+        <li><a class="compose" href="{% url 'compose' %}"><span class="icon-edit-sign"   ></span> compose</a></li>
+        <li><a class="random"  href="{% url 'random'  %}"><span class="icon-warning-sign"></span> random</a></li>
+      </ul>
+      <br style="clear: left;" />
+    </nav>
+    <div class="auth">
+    {% if user.is_authenticated %}
+      <p>Welcome, <strong>{{ user.username }}</strong>! <a href="{% url 'logout' %}">Log out?</a></p>
+    {% else %}
+      <p><a href="{% url 'login' %}">Log in</a></p>
+    {% endif %}
+    </div>
   </header>
   <div role="main">
     {% block content %}

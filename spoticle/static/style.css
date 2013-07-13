@@ -11,7 +11,7 @@ a {
   color: #348;
   text-decoration: inherit;
 }
-header a {
+header nav a {
   color: inherit;
 }
 h1, h2, h3, h4 {
@@ -23,9 +23,11 @@ input, select, textarea, button {
 }
 
 
-header {
+header nav {
   line-height: 80px;
   padding-bottom: 25px;
+}
+header {
   border-bottom: 1px solid #ccc;
 }
 h1 {
@@ -69,6 +71,10 @@ header ul li a:hover, header ul li.current a:hover {
 }
 header ul li.current a {
   border-bottom: 3px solid #d48e83;
+}
+.auth {
+  position: absolute;
+  top: 0; right: 0;
 }
 
 .positions {

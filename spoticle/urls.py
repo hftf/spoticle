@@ -19,6 +19,10 @@ urlpatterns = patterns('',
 
     url(r'^clip/(?P<clip_id>\d+)/$', views.clip, name='clip'),
 
+    # Auth
+    url(r'^accounts/login/$', 'django.contrib.auth.views.login', { 'template_name': 'login.html', 'extra_context': { 'next': '/' }}, name='login'),
+    url(r'^accounts/logout/$', 'django.contrib.auth.views.logout', { 'next_page': '/' }, name='logout'),
+
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
