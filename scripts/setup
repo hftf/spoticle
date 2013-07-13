@@ -1,7 +1,0 @@
-import os
-
-os.system('sudo wget http://youtube-dl.org/downloads/2013.07.12/youtube-dl -O /usr/local/bin/youtube-dl')
-os.system('sudo chmod a+x /usr/local/bin/youtube-dl')
-os.system('sudo apt-get install ffmpeg')
-os.system('sudo apt-get install mp3splt')
-os.system('sudo apt-get install mp3wrap')
