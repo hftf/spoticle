@@ -1,1 +1,65 @@
-[{"pk": 1, "model": "contenttypes.contenttype", "fields": {"model": "permission", "name": "permission", "app_label": "auth"}}, {"pk": 2, "model": "contenttypes.contenttype", "fields": {"model": "group", "name": "group", "app_label": "auth"}}, {"pk": 3, "model": "contenttypes.contenttype", "fields": {"model": "user", "name": "user", "app_label": "auth"}}, {"pk": 4, "model": "contenttypes.contenttype", "fields": {"model": "contenttype", "name": "content type", "app_label": "contenttypes"}}, {"pk": 5, "model": "contenttypes.contenttype", "fields": {"model": "session", "name": "session", "app_label": "sessions"}}, {"pk": 6, "model": "contenttypes.contenttype", "fields": {"model": "site", "name": "site", "app_label": "sites"}}, {"pk": 7, "model": "contenttypes.contenttype", "fields": {"model": "logentry", "name": "log entry", "app_label": "admin"}}, {"pk": 8, "model": "contenttypes.contenttype", "fields": {"model": "migrationhistory", "name": "migration history", "app_label": "south"}}, {"pk": 9, "model": "contenttypes.contenttype", "fields": {"model": "quiz", "name": "quiz", "app_label": "spoticle"}}, {"pk": 10, "model": "contenttypes.contenttype", "fields": {"model": "clip", "name": "clip", "app_label": "spoticle"}}, {"pk": 11, "model": "contenttypes.contenttype", "fields": {"model": "quizclip", "name": "quiz clip", "app_label": "spoticle"}}, {"pk": "tmun8x9uev8e6z9bxmfglnjafztv526y", "model": "sessions.session", "fields": {"expire_date": "2013-07-27T13:31:34.806Z", "session_data": "MjI4YTgyNjU5OWU5ZDI1ZjNhM2YxNDk2ZmIyOWExYWM5YWI2NGY1ODqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu"}}, {"pk": 1, "model": "sites.site", "fields": {"domain": "example.com", "name": "example.com"}}, {"pk": 1, "model": "south.migrationhistory", "fields": {"applied": "2013-07-13T13:31:43.244Z", "app_name": "spoticle", "migration": "0001_initial"}}, {"pk": 1, "model": "spoticle.clip", "fields": {"name": "First clip", "start_seconds": 9, "end_seconds": 99, "duration": 9, "path": "1", "youtube_url": "9"}}, {"pk": 2, "model": "spoticle.clip", "fields": {"name": "Second clip", "start_seconds": 8, "end_seconds": 8, "duration": 8, "path": "0", "youtube_url": "8"}}, {"pk": 1, "model": "spoticle.quizclip", "fields": {"position": 2, "question": "This is the second question", "answers": "Two", "clip": 2, "quiz": 1}}, {"pk": 2, "model": "spoticle.quizclip", "fields": {"position": 1, "question": "First clip question", "answers": "One", "clip": 1, "quiz": 1}}, {"pk": 1, "model": "auth.permission", "fields": {"codename": "add_permission", "name": "Can add permission", "content_type": 1}}, {"pk": 2, "model": "auth.permission", "fields": {"codename": "change_permission", "name": "Can change permission", "content_type": 1}}, {"pk": 3, "model": "auth.permission", "fields": {"codename": "delete_permission", "name": "Can delete permission", "content_type": 1}}, {"pk": 4, "model": "auth.permission", "fields": {"codename": "add_group", "name": "Can add group", "content_type": 2}}, {"pk": 5, "model": "auth.permission", "fields": {"codename": "change_group", "name": "Can change group", "content_type": 2}}, {"pk": 6, "model": "auth.permission", "fields": {"codename": "delete_group", "name": "Can delete group", "content_type": 2}}, {"pk": 7, "model": "auth.permission", "fields": {"codename": "add_user", "name": "Can add user", "content_type": 3}}, {"pk": 8, "model": "auth.permission", "fields": {"codename": "change_user", "name": "Can change user", "content_type": 3}}, {"pk": 9, "model": "auth.permission", "fields": {"codename": "delete_user", "name": "Can delete user", "content_type": 3}}, {"pk": 10, "model": "auth.permission", "fields": {"codename": "add_contenttype", "name": "Can add content type", "content_type": 4}}, {"pk": 11, "model": "auth.permission", "fields": {"codename": "change_contenttype", "name": "Can change content type", "content_type": 4}}, {"pk": 12, "model": "auth.permission", "fields": {"codename": "delete_contenttype", "name": "Can delete content type", "content_type": 4}}, {"pk": 13, "model": "auth.permission", "fields": {"codename": "add_session", "name": "Can add session", "content_type": 5}}, {"pk": 14, "model": "auth.permission", "fields": {"codename": "change_session", "name": "Can change session", "content_type": 5}}, {"pk": 15, "model": "auth.permission", "fields": {"codename": "delete_session", "name": "Can delete session", "content_type": 5}}, {"pk": 16, "model": "auth.permission", "fields": {"codename": "add_site", "name": "Can add site", "content_type": 6}}, {"pk": 17, "model": "auth.permission", "fields": {"codename": "change_site", "name": "Can change site", "content_type": 6}}, {"pk": 18, "model": "auth.permission", "fields": {"codename": "delete_site", "name": "Can delete site", "content_type": 6}}, {"pk": 19, "model": "auth.permission", "fields": {"codename": "add_logentry", "name": "Can add log entry", "content_type": 7}}, {"pk": 20, "model": "auth.permission", "fields": {"codename": "change_logentry", "name": "Can change log entry", "content_type": 7}}, {"pk": 21, "model": "auth.permission", "fields": {"codename": "delete_logentry", "name": "Can delete log entry", "content_type": 7}}, {"pk": 22, "model": "auth.permission", "fields": {"codename": "add_migrationhistory", "name": "Can add migration history", "content_type": 8}}, {"pk": 23, "model": "auth.permission", "fields": {"codename": "change_migrationhistory", "name": "Can change migration history", "content_type": 8}}, {"pk": 24, "model": "auth.permission", "fields": {"codename": "delete_migrationhistory", "name": "Can delete migration history", "content_type": 8}}, {"pk": 25, "model": "auth.permission", "fields": {"codename": "add_quiz", "name": "Can add quiz", "content_type": 9}}, {"pk": 26, "model": "auth.permission", "fields": {"codename": "change_quiz", "name": "Can change quiz", "content_type": 9}}, {"pk": 27, "model": "auth.permission", "fields": {"codename": "delete_quiz", "name": "Can delete quiz", "content_type": 9}}, {"pk": 28, "model": "auth.permission", "fields": {"codename": "add_clip", "name": "Can add clip", "content_type": 10}}, {"pk": 29, "model": "auth.permission", "fields": {"codename": "change_clip", "name": "Can change clip", "content_type": 10}}, {"pk": 30, "model": "auth.permission", "fields": {"codename": "delete_clip", "name": "Can delete clip", "content_type": 10}}, {"pk": 31, "model": "auth.permission", "fields": {"codename": "add_quizclip", "name": "Can add quiz clip", "content_type": 11}}, {"pk": 32, "model": "auth.permission", "fields": {"codename": "change_quizclip", "name": "Can change quiz clip", "content_type": 11}}, {"pk": 33, "model": "auth.permission", "fields": {"codename": "delete_quizclip", "name": "Can delete quiz clip", "content_type": 11}}, {"pk": 1, "model": "auth.user", "fields": {"username": "0", "first_name": "", "last_name": "", "is_active": true, "is_superuser": true, "is_staff": true, "last_login": "2013-07-13T13:31:34.804Z", "groups": [], "user_permissions": [], "password": "pbkdf2_sha256$10000$nTahRF0CeVwx$EjzPE1Km5kNu97DRRO6DFh9jBqkB6jdqre7ASodwjs4=", "email": "0@0.com", "date_joined": "2013-07-13T13:31:18.059Z"}}, {"pk": 1, "model": "admin.logentry", "fields": {"action_flag": 1, "action_time": "2013-07-13T13:33:18.988Z", "object_repr": "First quiz (1)", "object_id": "1", "change_message": "", "user": 1, "content_type": 9}}, {"pk": 2, "model": "admin.logentry", "fields": {"action_flag": 1, "action_time": "2013-07-13T13:33:30.002Z", "object_repr": "First clip (1)", "object_id": "1", "change_message": "", "user": 1, "content_type": 10}}, {"pk": 3, "model": "admin.logentry", "fields": {"action_flag": 1, "action_time": "2013-07-13T13:33:40.281Z", "object_repr": "Second clip (2)", "object_id": "2", "change_message": "", "user": 1, "content_type": 10}}, {"pk": 4, "model": "admin.logentry", "fields": {"action_flag": 1, "action_time": "2013-07-13T13:33:53.775Z", "object_repr": "[2] First quiz (1) (Second clip (2))", "object_id": "1", "change_message": "", "user": 1, "content_type": 11}}, {"pk": 5, "model": "admin.logentry", "fields": {"action_flag": 1, "action_time": "2013-07-13T13:34:02.788Z", "object_repr": "[1] First quiz (1) (First clip (1))", "object_id": "2", "change_message": "", "user": 1, "content_type": 11}}, {"pk": 1, "model": "spoticle.quiz", "fields": {"require_in_order": false, "description": "This is the description! It is very exciting", "tags": "some, tags", "question": "This is the overall question", "answers": "This is the overall answer", "created_by": 1, "timer_seconds": "09:00:00", "path": "1", "pub_date": "2013-07-13T14:33:15Z", "slug": "first-quiz", "name": "First quiz"}}]
+[
+{
+    "pk": 1, 
+    "model": "spoticle.clip", 
+    "fields": {
+        "name": "First clip", 
+        "start_seconds": 9, 
+        "end_seconds": 99, 
+        "duration": 9, 
+        "path": "1", 
+        "youtube_url": "9"
+    }
+},
+{
+    "pk": 2, 
+    "model": "spoticle.clip", 
+    "fields": {
+        "name": "Second clip", 
+        "start_seconds": 8, 
+        "end_seconds": 8, 
+        "duration": 8, 
+        "path": "0", 
+        "youtube_url": "8"
+    }
+},
+{
+    "pk": 1, 
+    "model": "spoticle.quizclip", 
+    "fields": {
+        "position": 2, 
+        "question": "This is the second question", 
+        "answers": "Two", 
+        "clip": 2, 
+        "quiz": 1
+    }
+},
+{
+    "pk": 2, 
+    "model": "spoticle.quizclip", 
+    "fields": {
+        "position": 1, 
+        "question": "First clip question", 
+        "answers": "One", 
+        "clip": 1, 
+        "quiz": 1
+    }
+},
+{
+    "pk": 1, 
+    "model": "spoticle.quiz", 
+    "fields": {
+        "require_in_order": false, 
+        "description": "This is the description! It is very exciting", 
+        "tags": "some, tags", 
+        "question": "This is the overall question", 
+        "answers": "This is the overall answer", 
+        "created_by": 1, 
+        "timer_seconds": "09:00:00", 
+        "path": "1", 
+        "pub_date": "2013-07-13T14:33:15Z", 
+        "slug": "first-quiz", 
+        "name": "First quiz"
+    }
+}
+]
