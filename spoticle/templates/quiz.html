@@ -2,9 +2,19 @@
 
 {% block content %}
 <h2><strong>{{ quiz.name }}</strong></h2>
-<p>By <strong>user mcuser</strong></p>
+<p><cite>By <strong>user mcuser</strong></cite></p>
+<p>{{ quiz.description }}</p>
+<hr />
+
+{% if quiz.question %}
+	<h3>Overall question</h3>
+	<p>{{ quiz.question }}</p>
+	<p><input type="text" placeholder="Answer" /></p>
+	<hr />
+{% endif %}
+
 <ol>
-{% for quizclip in quiz.ordered_quizclips %}
+{% for quizclip in quiz.quizclip_set.all %}
 	<li value="{{ quizclip.position }}"><a href="{% url 'clip' quizclip.clip.id %}">{{ quizclip.clip.name }}</a></li>
 {% endfor %}
 </ol>

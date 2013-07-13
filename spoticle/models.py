@@ -19,9 +19,6 @@ class Quiz(models.Model):
 	def __unicode__(self):
 		return "%s (%s)" % (self.name, self.id)
 
-	def ordered_quizclips(self):
-		return self.quizclip_set.order_by("position")
-
 	def save(self, *args, **kwargs):
 		"""
 		TODO: check if slug is a dupe
@@ -58,3 +55,5 @@ class QuizClip(models.Model):
 	def __unicode__(self):
 		return "[%s] %s (%s)" % (self.position, self.quiz, self.clip)
 
+	class Meta:
+		ordering = ['position']
