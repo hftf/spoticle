@@ -8,13 +8,21 @@
 <section class="current-clip">
 	<p>
 		<span class="position">4</span>
-	{% if quiz.question %}
-		{{ quiz.question }}
-	{% else %}
-		Current clip question
-	{% endif %}
+		{% if quiz.question %}
+			{{ quiz.question }}
+		{% else %}
+			Current clip question
+		{% endif %}
 	</p>
-	<p><input class="answer" type="text" placeholder="Answer" /></p>
+	<script type="text/javascript">
+	function check_answer() {
+		Dajaxice.spoticle.check_answer(
+			function(x) { console.log(x); },
+			{ client_answer: this.value, quiz_id: {{ quiz.id }} }
+		);
+	}
+	</script>
+	<p><input class="answer" type="text" placeholder="Answer" onkeyup="check_answer.call(this)" /></p>
 	<p class="sound-bar">
 		<audio controls height="100" width="100">
 			<source src="{{ quiz.path }}" type="audio/mpeg" />
