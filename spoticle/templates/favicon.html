@@ -1,0 +1,16 @@
+
+    <canvas id="asdf" width="16" height="16" style="border: 1px solid black"></canvas>
+    <script type="text/javascript">
+    setTimeout(
+    function foo() {
+      console.log(0)
+    c = document.getElementById('asdf');
+    cx = c.getContext("2d");
+    cx.font = '27px Copse';
+    cx.textAlign = 'start';
+    cx.textBaseline = 'alphabetic';
+    cx.fillStyle = '#000';
+    cx.fillText("s", 2, 15);
+    console.log(c.toDataURL('image/x-icon'));
+    }, 1000);
+    </script>
