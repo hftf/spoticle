@@ -14,7 +14,7 @@ class Quiz(models.Model):
 	question = models.CharField(max_length=200, blank=True)
 	answers = models.CharField(max_length=200, blank=True)
 
-	path = models.CharField(max_length=200)
+	path = models.FileField(upload_to='uploaded_quizzes')
 	pub_date = models.DateTimeField('date published') # or never
 	created_by = models.ForeignKey(User)
 
