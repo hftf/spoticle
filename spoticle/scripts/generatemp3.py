@@ -12,7 +12,7 @@ import argparse, subprocess, sys
 
 MEDIA_ROOT = "media"
 cliproot = '../../' + MEDIA_ROOT + '/uploaded_clips/'
-quizroot = '../../' + MEDIA_ROOT + '/uploaded_quizes/'
+quizroot = '../../' + MEDIA_ROOT + '/uploaded_quizzes/'
 
 def youtomp3 (id, link):
 	link = 'http://www.youtube.com/watch?v=' + link
