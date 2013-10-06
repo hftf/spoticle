@@ -1,8 +1,9 @@
 {% extends "base.html" %}
+{% load humanize %}
 
 {% block content %}
 <h2>{{ quiz.name }}</h2>
-<p><cite>By <strong>{{ quiz.created_by.username }}</strong></cite></p>
+<p><cite>By <strong>{{ quiz.created_by.username }}</strong> <time>{{ quiz.pub_date | naturaltime }}</time></cite></p>
 <p>{{ quiz.description }}</p>
 
 <section class="current-clip">

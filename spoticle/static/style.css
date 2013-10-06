@@ -118,12 +118,9 @@ header ul li.current a {
 .icon-remove-sign { color: #e33; }
 .icon-circle-blank { color: #bbb; }
 
-input.answer, input.name, input.tags {
+input.answer {
   font-size: 1.5em;
   text-align: center;
-}
-input.tags{
-  width: 19em;
 }
 .current-clip {
   padding: 0.5em 0;
