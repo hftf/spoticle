@@ -8,7 +8,7 @@ class Quiz(models.Model):
 	slug = models.SlugField(max_length=40, unique=True) # generated
 	description = models.CharField(max_length=1000, blank=True)
 	require_in_order = models.BooleanField()
-	timer_seconds = models.TimeField()
+	timer_seconds = models.IntegerField()
 	tags = models.CharField(max_length=400, blank=True) # to make m2m
 
 	question = models.CharField(max_length=200, blank=True)
@@ -38,7 +38,7 @@ class QuizAdmin(admin.ModelAdmin):
 
 class Clip(models.Model):
 	name = models.CharField(max_length=200)
-	path = models.CharField(max_length=200)
+	path = models.FileField(upload_to='uploaded_clips')
 	youtube_url = models.CharField(max_length=200)
 	start_seconds = models.IntegerField(default=0)
 	end_seconds = models.IntegerField()
