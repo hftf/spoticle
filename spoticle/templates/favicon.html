@@ -1,16 +1,20 @@
-
-    <canvas id="asdf" width="16" height="16" style="border: 1px solid black"></canvas>
+    <canvas id="16" width="16" height="16" style="border: 1px solid black"></canvas>
+    <canvas id="32" width="32" height="32" style="border: 1px solid black"></canvas>
+    <canvas id="64" width="64" height="64" style="border: 1px solid black"></canvas>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Copse" />
+    <h1 style="font-family: Copse;">Hi</h1>
     <script type="text/javascript">
     setTimeout(
     function foo() {
-      console.log(0)
-    c = document.getElementById('asdf');
+    for (var r = 0; r <= 2; r ++) {
+    c = document.getElementById(16 << r);
     cx = c.getContext("2d");
-    cx.font = '27px Copse';
+    cx.font = (27 << r) + 'px Copse';
     cx.textAlign = 'start';
     cx.textBaseline = 'alphabetic';
     cx.fillStyle = '#000';
-    cx.fillText("s", 2, 15);
+    cx.fillText("s", 2 << r, 15 << r);
     console.log(c.toDataURL('image/x-icon'));
-    }, 1000);
+    }
+    }, 100);
     </script>
