@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
+<form method="POST">
+{{ request.POST }}
+
+	{% csrf_token %}
 <p><input class="name" type="text" placeholder="Quiz name" /></p>
 <!--<p><input class="tags" type="text" placeholder="Tags (seperated by semicolons)" /></p>-->
 
@@ -12,6 +16,16 @@
 	<input class="end_seconds" type="text" placeholder="End" />
 </p>
 
+<hr />
+
+<table>
+{{ form.as_table }}
+</table>
+
+<p>
+	<input type="submit" value="Submit" />
+</p>
+</form>
 <!--<fieldset style="width: 400px;">
 	<h2>Add clip</h2>
 	<p class="drop">Drop or paste URL of YouTube or Spotify link here</p>

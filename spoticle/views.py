@@ -4,6 +4,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 
 from spoticle.models import Quiz, QuizClip, Clip
+from spoticle.forms import QuizForm
 import random as randomlib
 
 def index(request):
@@ -18,8 +19,22 @@ def random(request):
 	return redirect('quiz', xid)
 
 def compose(request):
+	if request.POST:
+		form = QuizForm(request.POST)
+		if form.is_valid():
+			quiz = form.save(commit=False)
+			quiz.created_by = request.user
+			quiz.save()
+
+			return redirect('quiz', quiz.id)
+		else:
+			form = QuizForm(request.POST)
+	else:
+		form = QuizForm()
+
 	context = {
-		
+		'form': form,
+		'request': request,
 	}
 	return render(request, 'compose.html', context)
 
