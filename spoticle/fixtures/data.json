@@ -55,7 +55,7 @@
         "question": "This is the overall question", 
         "answers": "This is the overall answer", 
         "created_by": 1, 
-        "timer_seconds": "09:00:00", 
+        "timer_seconds": 9, 
         "path": "1", 
         "pub_date": "2013-07-13T14:33:15Z", 
         "slug": "first-quiz", 
