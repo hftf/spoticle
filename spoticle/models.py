@@ -5,7 +5,7 @@ from django.template.defaultfilters import slugify
 
 class Quiz(models.Model):
 	name = models.CharField(max_length=200)
-	slug = models.SlugField(max_length=40, unique=True) # generated
+	slug = models.SlugField(max_length=40) # generated, unique=True
 	description = models.CharField(max_length=1000, blank=True)
 	require_in_order = models.BooleanField()
 	timer_seconds = models.IntegerField()
