@@ -16,12 +16,18 @@
 	{% endif %}
 	</p>
 	<p><input class="answer" type="text" placeholder="Answer" /></p>
+	{% if quiz.path %}
 	<p class="sound-bar">
 		<audio controls height="100" width="100">
 			<source src="{{ quiz.path.url }}" type="audio/mpeg" />
 			<embed height="50" width="100" src="{{ quiz.path.url }}" />
 		</audio>
 	</p>
+	{% else %}
+	<p class="error">
+		The audio is missing!
+	</p>
+	{% endif %}
 </section>
 
 <h3>Clips</h3>

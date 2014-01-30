@@ -14,8 +14,8 @@ class Quiz(models.Model):
 	question = models.CharField(max_length=200, blank=True)
 	answers = models.CharField(max_length=200, blank=True)
 
-	path = models.FileField(upload_to='uploaded_quizzes')
-	pub_date = models.DateTimeField('date published') # or never
+	path = models.FileField(upload_to='uploaded_quizzes', blank=True)
+	pub_date = models.DateTimeField('date published', blank=True, null=True) # or never
 	created_by = models.ForeignKey(User)
 
 	def __unicode__(self):
